@@ -1,0 +1,20 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    factory.classes:export:
+        class: 'Factory\InstallBundle\Command\ExportClassCommand'
+        public: true
+        tags: ['console.command']
+    factory.classes:import:
+        class: 'Factory\InstallBundle\Command\ImportClassCommand'
+        public: true
+        tags: ['console.command']
+
+    Tvornica\ImporBundle\Controller\:
+        resource: '../../Controller'
+        public: true
+        tags: ['controller.service_arguments']
+

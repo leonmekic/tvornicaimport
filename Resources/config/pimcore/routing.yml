@@ -1,0 +1,3 @@
+tvornica_impor_homepage:
+    path:     /tvornica_impor
+    defaults: { _controller: TvornicaImporBundle:Default:index }
